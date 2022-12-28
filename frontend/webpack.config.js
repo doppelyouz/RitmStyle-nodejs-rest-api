@@ -22,22 +22,22 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Главная",
       filename: "index.html",
-      template: "src/template.html",
+      template: "src/views/template.html",
     }),
     new HtmlWebpackPlugin({
       title: "Сессии",
       filename: "sessions.html",
-      template: "src/sessions.html",
+      template: "src/views/sessions.html",
     }),
     new HtmlWebpackPlugin({
       title: "Новости",
       filename: "news.html",
-      template: "src/news.html",
+      template: "src/views/news.ejs"
     }),
     new HtmlWebpackPlugin({
       title: "Блог",
       filename: "blog.html",
-      template: "src/blog.html",
+      template: "src/views/blog.ejs",
     })
   ],
   module: {
@@ -53,7 +53,11 @@ module.exports = {
       {
         test: /\.html$/,
         use: "html-loader"
-      }
+      },
+      {
+        test: /\.ejs$/i,
+        use: ['html-loader', 'template-ejs-loader'],
+      },
     ],
   },
 };
