@@ -1,0 +1,40 @@
+.map {
+    margin: 0 auto;
+    width: 1200px;
+    font-family: El Messiri;
+    margin-bottom: 100px;
+    .map_grid {
+        display: grid;
+        grid-template-areas: 
+        'img .'
+        'img .';
+        grid-gap: 20px;
+        .img {
+            grid-area: img;
+        }
+        .map_grid_item {
+            width: 392px;
+            height: 290px;
+            background: #018ABE;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            justify-content: space-around;
+            h3 {
+                font-size: 30px;
+            }
+            button {
+                background:white;
+                color: #018ABE;
+                border-radius: 5px;
+                font-size: 15px;
+                width: 200px;
+                height: 50px;
+            }
+            img {
+                margin-right: 15px;
+            }
+        }
+    }
+}

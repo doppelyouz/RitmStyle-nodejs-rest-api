@@ -1,0 +1,56 @@
+@use '../mixins.scss' as m;
+
+.reviews {
+    margin: 0 auto;
+    width: 1296px;
+    font-family: El Messiri;
+    .reviews_title {
+        display:flex;
+        justify-content: center;
+        .review_title_text {
+            font-size: 40px;
+            margin: 0px 60px;
+            margin-bottom: 25px;
+        }
+    }
+
+    .wingLeft {
+        @include m.wings(#018ABE)
+    }
+
+    .wingRight {
+        @include m.wings(#018ABE);
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+
+    .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-bottom: 150px;
+    }
+
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        background: #018ABE;
+        border-radius: 10px;
+        width: 636px;
+        height: 350px;
+    }
+
+    .swiper-slide {
+        display: grid;
+        padding: 45px;
+        color:white;
+        padding-bottom: 5%;
+        h3 {
+            font-size: 45px;
+        }
+        p {
+            display: grid;
+            align-items: end;
+            font-size: 20px;
+        }
+    }
+}

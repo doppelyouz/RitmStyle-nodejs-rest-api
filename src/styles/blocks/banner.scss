@@ -1,0 +1,44 @@
+@use '../mixins.scss' as m;
+
+.banner {
+    margin: 0 auto;
+    font-family: El Messiri;
+    margin-bottom: 150px;
+    .banner_image {
+        position: relative;
+        width: 1296px;
+        height: 600px;
+        background: url('/src/assets/images/banner.png') no-repeat;  
+        .banner_title {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; 
+            .banner_title_text {
+                font-size: 60px;
+            }
+        }
+        .banner_name {
+            position: absolute;
+            left: 50%;
+            top: 25%;
+            transform: translateX(-50%);
+            display:flex;
+            .banner_name_text {
+                font-size: 25px;
+                margin: 0px 60px;
+            }
+        }
+        .wingLeft {
+            @include m.wings(white)
+        }
+        .wingRight {
+            @include m.wings(white);
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
+    }
+}

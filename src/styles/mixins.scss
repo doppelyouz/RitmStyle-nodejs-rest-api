@@ -1,0 +1,7 @@
+
+@mixin wings($color) {
+    width: 28px;
+    height: 14px;
+    background-color: $color;
+    border-radius: 0px 50px;
+}

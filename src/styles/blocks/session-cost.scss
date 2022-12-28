@@ -1,0 +1,53 @@
+@use '../mixins.scss' as m;
+
+.cost {
+    margin: 0 auto;
+    width: 1100px;
+    font-family: El Messiri;
+    margin-bottom: 150px;
+    .cost_title {
+        display:flex;
+        justify-content: center;
+        .cost_title_text {
+            font-size: 40px;
+            margin: 0px 60px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .cost_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 100px;
+        .certificates {
+            padding: 15px 0px;
+            li {
+                font-size: 20px;
+                margin: 25px 0px;
+                display: grid;
+                grid-template-columns: .5fr 4fr 1fr;
+            }
+        }
+        .gift_certificate {
+            img {
+                height: 396px;
+                width: 526px;
+                border-radius: 10px;
+            }
+            .gift_certificate_text {
+                margin-top: 25px;
+                font-size: 25px;
+                text-align: center;
+            }
+        }
+    }
+
+    .wingLeft {
+        @include m.wings(#018ABE)
+    }
+
+    .wingRight {
+        @include m.wings(#018ABE);
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+}
