@@ -2,7 +2,8 @@
 
 .sessions {
     margin: 0 auto;
-    width: 1296px;
+    width: 100%;
+    max-width: 1296px;
     font-family: El Messiri;
     .wingLeft {
         @include m.wings(#018ABE)
@@ -21,17 +22,28 @@
         }
     }
     .sessions_cards {
+        width: 100vw;
+        max-width: 100%;
         display: grid;
         grid-template-areas:
         "big . ."
         "big . .";
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 25px 10px;
+        grid-template-rows: 258px 258px;
+        gap: 24px;
         margin-bottom: 150px;
+        @media (max-width: 1000px) {
+            grid-template-areas:
+            "big big"
+            ". ."
+            ". .";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3, 258px);
+        }
         .sessions_card_big {
+            width: 100%;
+            height: 100%;
             background: url('/src/assets/images/session.png')  no-repeat;
-            width: 416px;
-            height: 540px;
             grid-area: big;
             background: linear-gradient(0deg, rgba(1, 138, 190, 0.5), rgba(1, 138, 190, 0.5)), url('/src/assets/images/sessionBig.png'), #8E8E8E no-repeat;
             border-radius: 10px;
@@ -43,9 +55,9 @@
             }
         }
         .sessions_card {
+            width: 100%;
+            height: 100%;
             background: linear-gradient(0deg, rgba(1, 138, 190, 0.5), rgba(1, 138, 190, 0.5)), url('/src/assets/images/session.png'), #8E8E8E no-repeat;
-            width: 416px;
-            height: 258px;
             border-radius: 10px;
             display: flex;
             align-items: flex-end;
