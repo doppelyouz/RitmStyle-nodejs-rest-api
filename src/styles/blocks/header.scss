@@ -46,6 +46,11 @@ $headerHight: 120px;
     justify-content: space-between;
     align-items: center;
     gap: 5px;
+    a, a:visited{        
+      text-decoration: none;
+      color: white;
+    }
+    a:hover{text-decoration: none; color: v.$secondColor;}
   }
   .navElement {
     font-weight: 400;

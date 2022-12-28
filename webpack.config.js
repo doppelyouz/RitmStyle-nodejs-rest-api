@@ -20,10 +20,25 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "WebpackApp",
-      filename: "index.html",
+      title: "Главная",
+      filename: "template.html",
       template: "src/template.html",
     }),
+    new HtmlWebpackPlugin({
+      title: "Сессии",
+      filename: "sessions.html",
+      template: "src/sessions.html",
+    }),
+    new HtmlWebpackPlugin({
+      title: "Новости",
+      filename: "news.html",
+      template: "src/news.html",
+    }),
+    new HtmlWebpackPlugin({
+      title: "Блог",
+      filename: "blog.html",
+      template: "src/blog.html",
+    })
   ],
   module: {
     rules: [
