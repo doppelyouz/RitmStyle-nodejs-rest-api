@@ -21,8 +21,7 @@ saveUser.addEventListener('click', async (e) => {
                 "Content-Type": "application/json",
             }
     });
-}
-});
+}});
 
 let newsArray = [];
 

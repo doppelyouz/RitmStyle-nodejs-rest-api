@@ -40,7 +40,7 @@ const createBlogs = (data) => {
             </div>
             <div class="blog_block_grid_info">
                 <div class="likeButton">"${data.time}</div>
-                <h3>Новый формат сеансов</h3>
+                <h3>${data.title}</h3>
                 <p>"${data.about}</p>
                 <div class="likeButton">Читать статью</div>
             </div>
