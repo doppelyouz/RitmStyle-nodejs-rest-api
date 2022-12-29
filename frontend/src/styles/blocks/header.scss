@@ -7,7 +7,7 @@ $headerHight: 120px;
   width: 100%;
   height: $headerHight;
   margin-bottom: 20px;
-  z-index: 999999;
+  z-index: 10;
 
   .fixed {
     display: flex;

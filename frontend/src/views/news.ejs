@@ -5,11 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><% title %> </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Новости</title>
 </head>
 
 <body>
     <div class="layout">
+        <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Name</span>
+                        <input type="text" class="form-control" aria-label="Name" id="name">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Email</span>
+                        <input type="text" class="form-control" aria-label="Email" id="email">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Phone</span>
+                        <input type="text" class="form-control" aria-label="Phone" id="phone">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="saveUser">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         <div class="header">
             <div class="fixed">
                 <div class="container">
@@ -26,9 +57,9 @@
                         <li class="navElement"><a href="blog.html">Блог</a></li>
                     </ul>
                     <div class="buttonWrapper">
-                        <button type="button" class="button">
+                        <button type="button" class="button" id="enroll" data-bs-toggle="modal" data-bs-target="#enrollModal">
                             Записаться на сеанс
-                        </button>
+                          </button>
                     </div>
                 </div>
             </div>
@@ -40,31 +71,8 @@
                 <div class="news_title_text">Новости</div>
                 <div class="wingRight"></div>
             </div>
-            <div class="news_grid">
-                <div class="news_grid_info">
-                    <div class="likeButton">13.02.2022</div>
-                    <h3>Новый формат сеансов</h3>
-                </div>
-                <div class="news_grid_info">
-                    <div class="likeButton">13.02.2022</div>
-                    <h3>Новый формат сеансов</h3>
-                </div>                
-                <div class="news_grid_info">
-                    <div class="likeButton">13.02.2022</div>
-                    <h3>Новый формат сеансов</h3>
-                </div>                
-                <div class="news_grid_info">
-                    <div class="likeButton">13.02.2022</div>
-                    <h3>Новый формат сеансов</h3>
-                </div>                
-                <div class="news_grid_info">
-                    <div class="likeButton">13.02.2022</div>
-                    <h3>Новый формат сеансов</h3>
-                </div>                
-                <div class="news_grid_info">
-                    <div class="likeButton">13.02.2022</div>
-                    <h3>Новый формат сеансов</h3>
-                </div>
+            <div class="news_grid" id="news">
+                
             </div>
             <div class="ritm_style">
                 <hr>
@@ -72,5 +80,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../scripts/news.js"></script>
 </body>
 </html>

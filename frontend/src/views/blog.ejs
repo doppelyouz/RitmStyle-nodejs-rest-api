@@ -2,93 +2,112 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Новости</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>Новости</title>
 </head>
 
 <body>
-    <div class="layout">
-        <div class="header">
-            <div class="fixed">
-                <div class="container">
-                    <div class="logoWrapper">
-                        <img src="/src/assets/images/logo.svg" alt="" class="logo">
-                    </div>
-                    <ul class="navigation">
-                        <li class="navElement"><a href="index.html">Главная</a></li>
-                        <li class="navElement"><a href="sessions.html">Сеансы</a></li>
-                        <li class="navElement">Отзывы</li>
-                        <li class="navElement">Контакты</li>
-                        <li class="navElement"><a href="news.html">Новости</a></li>
-                        <li class="navElement">Обо мне</li>
-                        <li class="navElement"><a href="blog.html">Блог</a></li>
-                    </ul>
-                    <div class="buttonWrapper">
-                        <button type="button" class="button">
-                            Записаться на сеанс
-                        </button>
-                    </div>
+  <div class="layout">
+    <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Name</span>
+                    <input type="text" class="form-control" aria-label="Name" id="name">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Email</span>
+                    <input type="text" class="form-control" aria-label="Email" id="email">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Phone</span>
+                    <input type="text" class="form-control" aria-label="Phone" id="phone">
                 </div>
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="saveUser">Save changes</button>
+            </div>
+          </div>
         </div>
-        <div class="blog">
-            <hr style="margin-bottom: 50px">
-            <div class="blog_title">
-                <div class="wingLeft"></div>
-                <div class="blog_title_text">Блог</div>
-                <div class="wingRight"></div>
-            </div>
-            <div class="blog_blocks">
-                <div class="blog_block">
-                    <div class="blog_block_grid">
-                        <div><img src="../assets/images/newFormat.png" alt="new format"></div>
-                        <div class="blog_block_grid_info">
-                            <div class="likeButton">13.02.2022</div>
-                            <h3>Новый формат сеансов</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget massa vitae tempus at
-                                pretium lacus viverra. Vitae libero vivamus quis enim quam vitae dictumst nulla duis.
-                                Sed nisl nibh et morbi tristique suspendisse morbi. Consequat facilisi tortor
-                                consectetur magnis odio. Risus, aenean tortor cras consectetur lacus, ut erat ac et.
-                                Fermentum aliquam ac egestas eget risus a. Maecenas sed pellentesque bibendum vitae at
-                                praesent sed. Amet pretium arcu gravida arcu ut dui sem quis id. Tristique in leo donec
-                                proin odio eget. Neque ut in egestas lacus sit nunc, nec. Proin mattis augue sit leo
-                                sagittis nam id accumsan. Pulvinar nunc fermentum vulputate ultrices pulvinar sed
-                                ultrices quis.</p>
-                            <div class="likeButton">Читать статью</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="blog_block">
-                    <div class="blog_block_grid">
-                        <div><img src="../assets/images/newFormat.png" alt="new format"></div>
-                        <div class="blog_block_grid_info">
-                            <div class="likeButton">13.02.2022</div>
-                            <h3>Новый формат сеансов</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget massa vitae tempus at
-                                pretium lacus viverra. Vitae libero vivamus quis enim quam vitae dictumst nulla duis.
-                                Sed nisl nibh et morbi tristique suspendisse morbi. Consequat facilisi tortor
-                                consectetur magnis odio. Risus, aenean tortor cras consectetur lacus, ut erat ac et.
-                                Fermentum aliquam ac egestas eget risus a. Maecenas sed pellentesque bibendum vitae at
-                                praesent sed. Amet pretium arcu gravida arcu ut dui sem quis id. Tristique in leo donec
-                                proin odio eget. Neque ut in egestas lacus sit nunc, nec. Proin mattis augue sit leo
-                                sagittis nam id accumsan. Pulvinar nunc fermentum vulputate ultrices pulvinar sed
-                                ultrices quis.</p>
-                            <div class="likeButton">Читать статью</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="ritm_style">
-                <hr>
-                <span>© 2018-2022 RitmStyle</span>
-            </div>
-        </div>
-    </div>
-    </div>
+      </div>
 
+    <div class="header">
+      <div class="fixed">
+        <div class="container">
+          <div class="logoWrapper">
+            <img src="/src/assets/images/logo.svg" alt="" class="logo">
+          </div>
+          <ul class="navigation">
+            <li class="navElement"><a href="index.html">Главная</a></li>
+            <li class="navElement"><a href="sessions.html">Сеансы</a></li>
+            <li class="navElement">Отзывы</li>
+            <li class="navElement">Контакты</li>
+            <li class="navElement"><a href="news.html">Новости</a></li>
+            <li class="navElement">Обо мне</li>
+            <li class="navElement"><a href="blog.html">Блог</a></li>
+          </ul>
+          <div class="buttonWrapper">
+            <button type="button" class="button" id="enroll" data-bs-toggle="modal" data-bs-target="#enrollModal">
+              Записаться на сеанс
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="blog">
+      <hr style="margin-bottom: 50px">
+      <div class="blog_title">
+        <div class="wingLeft"></div>
+        <div class="blog_title_text">Блог</div>
+        <div class="wingRight"></div>
+      </div>
+      <div class="blog_blocks" id="blogs"></div>
+      <form>
+        <h2>Создать блог</h2>
+        <div class="input-field">
+          <input id="time" name="time" type="text" class="validate" required />
+          <label for="time">Время: </label>
+          <span class="helper-text" data-error="Введите время"></span>
+        </div>
+        <div class="input-field">
+            <input id="title" name="title" type="text" class="validate" required />
+            <label for="title">Название: </label>
+            <span class="helper-text" data-error="Введите название"></span>
+        </div>
+        <div class="input-field">
+            <textarea id="about" name="about" class="materialize-textarea validate" required></textarea>
+            <label for="about">О чем: </label>
+            <span class="helper-text" data-error="Введите о чем блог"></span>
+        </div>
+        <div class="input-field">
+          <input id="img" name="img" type="text" class="validate" required />
+          <label for="img">URL картинки</label>
+          <span class="helper-text" data-error="Введите URL картинки"></span>
+        </div>
+        <button class="btn btn-primary" id="createBlog">Добавить блог</button>
+    </form>
+      <div class="ritm_style">
+        <hr>
+        <span>© 2018-2022 RitmStyle</span>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="../scripts/blog.js"></script>
 </body>
-
 </html>
