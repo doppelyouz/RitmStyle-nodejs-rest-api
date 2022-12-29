@@ -23,6 +23,5 @@
     "style-loader": "^3.3.1",
     "template-ejs-loader": "^0.9.4",
     "webpack-dev-server": "^4.11.1"
-  },
-  "type": "module"
+  }
 }
